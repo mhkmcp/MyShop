@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # custom apps
     'shop.apps.ShopConfig',
+    'cart.apps.CartConfig',
 
     # built in
     'django.contrib.admin',
@@ -66,6 +67,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # cart's context processor
+                'cart.context_processors.cart',
             ],
         },
     },
@@ -117,7 +120,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+CART_SESSION_ID = 'cart'
 
 
 # Static files (CSS, JavaScript, Images)
