@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     # custom apps
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
+    'orders.apps.OrdersConfig',
 
     # built in
     'django.contrib.admin',
