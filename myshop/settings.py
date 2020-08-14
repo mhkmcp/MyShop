@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 
     # built in
     'django.contrib.admin',
@@ -124,6 +125,20 @@ USE_L10N = True
 USE_TZ = True
 
 CART_SESSION_ID = 'cart'
+
+# BrainTree settings
+
+BRAINTREE_MERCHANT_ID = '' # Merchant ID
+BRAINTREE_PUBLIC_KEY = '' # Public Key
+BRAINTREE_PRIVATE_KEY = '' # Private key
+
+from braintree import Configuration, Environment
+Configuration.configure(
+    Environment.Sandbox,
+    BRAINTREE_MERCHANT_ID,
+    BRAINTREE_PUBLIC_KEY,
+    BRAINTREE_PRIVATE_KEY
+)
 
 
 # Static files (CSS, JavaScript, Images)
