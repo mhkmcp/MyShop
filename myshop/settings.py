@@ -128,9 +128,9 @@ CART_SESSION_ID = 'cart'
 
 # BrainTree settings
 
-BRAINTREE_MERCHANT_ID = '' # Merchant ID
-BRAINTREE_PUBLIC_KEY = '' # Public Key
-BRAINTREE_PRIVATE_KEY = '' # Private key
+BRAINTREE_MERCHANT_ID = ''  # Merchant ID
+BRAINTREE_PUBLIC_KEY = ''    # Public Key
+BRAINTREE_PRIVATE_KEY = ''  # Private key
 
 from braintree import Configuration, Environment
 Configuration.configure(
