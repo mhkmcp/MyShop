@@ -128,9 +128,9 @@ CART_SESSION_ID = 'cart'
 
 # BrainTree settings
 
-BRAINTREE_MERCHANT_ID = ''  # Merchant ID
-BRAINTREE_PUBLIC_KEY = ''    # Public Key
-BRAINTREE_PRIVATE_KEY = ''  # Private key
+BRAINTREE_MERCHANT_ID = 'vsw25gst6bhnvq8t'  # Merchant ID
+BRAINTREE_PUBLIC_KEY = 'vf2r82pgkjxfk5yh'    # Public Key
+BRAINTREE_PRIVATE_KEY = '7325fed5957ccb83ee139bb56e367e52'  # Private key
 
 from braintree import Configuration, Environment
 Configuration.configure(
@@ -145,5 +145,7 @@ Configuration.configure(
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
